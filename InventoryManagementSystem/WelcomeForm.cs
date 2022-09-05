@@ -17,7 +17,9 @@ namespace InventoryManagementSystem
             InitializeComponent();
             timer1.Start();
         }
-        int startPoint = 0;
+
+        private const int V = 0;
+        int startPoint = V;
         private void timer1_Tick(object sender, EventArgs e)
         {
           

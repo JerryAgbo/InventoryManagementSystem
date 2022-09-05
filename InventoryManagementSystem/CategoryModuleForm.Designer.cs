@@ -188,6 +188,6 @@ namespace InventoryManagementSystem
         public System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.TextBox txtCatName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label Close;
+        private new System.Windows.Forms.Label Close;
     }
 }

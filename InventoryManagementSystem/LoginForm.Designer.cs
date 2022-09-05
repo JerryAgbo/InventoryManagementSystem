@@ -220,7 +220,7 @@ namespace InventoryManagementSystem
         private System.Windows.Forms.PictureBox PictureBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label Close;
+        private new System.Windows.Forms.Label Close;
     }
 }
 

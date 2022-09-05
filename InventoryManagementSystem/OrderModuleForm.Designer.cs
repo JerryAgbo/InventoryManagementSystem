@@ -642,6 +642,6 @@ namespace InventoryManagementSystem
         public System.Windows.Forms.DateTimePicker dtOrder;
         public System.Windows.Forms.NumericUpDown UDQty;
         public System.Windows.Forms.Label lblOid;
-        private System.Windows.Forms.Label Close;
+        private new System.Windows.Forms.Label Close;
     }
 }

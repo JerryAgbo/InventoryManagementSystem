@@ -285,6 +285,6 @@ namespace InventoryManagementSystem
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.ComboBox comboCat;
         public System.Windows.Forms.Label lblPid;
-        private System.Windows.Forms.Label Close;
+        private new System.Windows.Forms.Label Close;
     }
 }

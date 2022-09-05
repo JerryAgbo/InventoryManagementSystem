@@ -273,6 +273,6 @@ namespace InventoryManagementSystem
         public System.Windows.Forms.TextBox txtPhone;
         public System.Windows.Forms.TextBox txtRepass;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label Close;
+        private new System.Windows.Forms.Label Close;
     }
 }
