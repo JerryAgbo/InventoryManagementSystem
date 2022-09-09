@@ -13,7 +13,8 @@ namespace InventoryManagementSystem
 {
     public partial class ProductModuleForm : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\acer\Documents\dbIMS.mdf;Integrated Security=True;Connect Timeout=30");
+        private const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ebundb.mdf;Integrated Security=True;Connect Timeout=30";
+        SqlConnection con = new SqlConnection(ConnectionString);
         SqlCommand cm = new SqlCommand();
         SqlDataReader dr;
         public ProductModuleForm()

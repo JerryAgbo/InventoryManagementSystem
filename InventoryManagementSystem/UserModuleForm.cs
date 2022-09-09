@@ -13,7 +13,7 @@ namespace InventoryManagementSystem
 {
     public partial class UserModuleForm : Form
     {
-        private const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\JERRY RICHMAN\Documents\ebundb.mdf;Integrated Security=True;Connect Timeout=30";
+        private const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ebundb.mdf;Integrated Security=True;Connect Timeout=30";
         SqlConnection con = new SqlConnection(ConnectionString);
         SqlCommand cm = new SqlCommand();
         public UserModuleForm()
