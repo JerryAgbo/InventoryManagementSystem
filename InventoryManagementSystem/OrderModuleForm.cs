@@ -185,6 +185,14 @@ namespace InventoryManagementSystem
             con.Close();
         }
 
-     
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

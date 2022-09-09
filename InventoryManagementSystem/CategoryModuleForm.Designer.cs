@@ -30,6 +30,7 @@ namespace InventoryManagementSystem
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Close = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCatId = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@ namespace InventoryManagementSystem
             this.btnSave = new System.Windows.Forms.Button();
             this.txtCatName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Close = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,20 @@ namespace InventoryManagementSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(602, 49);
             this.panel1.TabIndex = 27;
+            // 
+            // Close
+            // 
+            this.Close.AutoSize = true;
+            this.Close.BackColor = System.Drawing.Color.Red;
+            this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Close.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close.ForeColor = System.Drawing.Color.White;
+            this.Close.Location = new System.Drawing.Point(578, 0);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(24, 27);
+            this.Close.TabIndex = 36;
+            this.Close.Text = "X";
+            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // label1
             // 
@@ -123,9 +137,10 @@ namespace InventoryManagementSystem
             // 
             // txtCatName
             // 
+            this.txtCatName.Font = new System.Drawing.Font("Segoe Script", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCatName.Location = new System.Drawing.Point(158, 76);
             this.txtCatName.Name = "txtCatName";
-            this.txtCatName.Size = new System.Drawing.Size(396, 22);
+            this.txtCatName.Size = new System.Drawing.Size(396, 27);
             this.txtCatName.TabIndex = 29;
             // 
             // label2
@@ -137,20 +152,6 @@ namespace InventoryManagementSystem
             this.label2.Size = new System.Drawing.Size(128, 20);
             this.label2.TabIndex = 28;
             this.label2.Text = "Category Name : ";
-            // 
-            // Close
-            // 
-            this.Close.AutoSize = true;
-            this.Close.BackColor = System.Drawing.Color.Red;
-            this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Close.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.ForeColor = System.Drawing.Color.White;
-            this.Close.Location = new System.Drawing.Point(578, 0);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(24, 27);
-            this.Close.TabIndex = 36;
-            this.Close.Text = "X";
-            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // CategoryModuleForm
             // 
