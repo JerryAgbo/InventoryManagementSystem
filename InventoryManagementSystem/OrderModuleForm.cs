@@ -33,15 +33,15 @@ namespace InventoryManagementSystem
 
         public void LoadCustomer()
         {
-            int i = 0;
+            int j = 0;
             dgvCustomer.Rows.Clear();
             cm = new SqlCommand("SELECT cid, cname FROM tbCustomer WHERE CONCAT(cid,cname) LIKE '%"+txtSearchCust.Text+"%'", con);
             con.Open();
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
-                i++;
-                dgvCustomer.Rows.Add(i, dr[0].ToString(), dr[1].ToString());
+                j++;
+                dgvCustomer.Rows.Add(j, dr[0].ToString(), dr[1].ToString());
             }
             dr.Close();
             con.Close();
