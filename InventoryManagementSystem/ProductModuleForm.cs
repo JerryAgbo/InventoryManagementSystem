@@ -117,5 +117,10 @@ namespace InventoryManagementSystem
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

@@ -30,6 +30,7 @@ namespace InventoryManagementSystem
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Close = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPDes = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@ namespace InventoryManagementSystem
             this.label2 = new System.Windows.Forms.Label();
             this.comboCat = new System.Windows.Forms.ComboBox();
             this.lblPid = new System.Windows.Forms.Label();
-            this.Close = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,20 @@ namespace InventoryManagementSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(602, 49);
             this.panel1.TabIndex = 14;
+            // 
+            // Close
+            // 
+            this.Close.AutoSize = true;
+            this.Close.BackColor = System.Drawing.Color.Red;
+            this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Close.Font = new System.Drawing.Font("Segoe Script", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close.ForeColor = System.Drawing.Color.White;
+            this.Close.Location = new System.Drawing.Point(574, 0);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(28, 31);
+            this.Close.TabIndex = 12;
+            this.Close.Text = "X";
+            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // label1
             // 
@@ -220,19 +234,6 @@ namespace InventoryManagementSystem
             this.lblPid.TabIndex = 29;
             this.lblPid.Text = "product id";
             this.lblPid.Visible = false;
-            // 
-            // Close
-            // 
-            this.Close.AutoSize = true;
-            this.Close.BackColor = System.Drawing.Color.Red;
-            this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Close.Font = new System.Drawing.Font("Segoe Script", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.ForeColor = System.Drawing.Color.White;
-            this.Close.Location = new System.Drawing.Point(574, 0);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(28, 31);
-            this.Close.TabIndex = 12;
-            this.Close.Text = "X";
             // 
             // ProductModuleForm
             // 
