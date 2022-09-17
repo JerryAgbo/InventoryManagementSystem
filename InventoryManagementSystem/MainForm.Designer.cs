@@ -167,7 +167,7 @@ namespace InventoryManagementSystem
             this.btnOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnOrder.Image")));
             this.btnOrder.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnOrder.ImageHover")));
             this.btnOrder.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnOrder.ImageNormal")));
-            this.btnOrder.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnOrder.InitialImage")));
+            this.btnOrder.InitialImage = null;
             this.btnOrder.Location = new System.Drawing.Point(601, 27);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(33, 29);

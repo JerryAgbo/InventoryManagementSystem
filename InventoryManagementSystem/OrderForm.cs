@@ -14,7 +14,8 @@ namespace InventoryManagementSystem
     public partial class OrderForm : Form
     {
         private const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ebundb.mdf;Integrated Security=True;Connect Timeout=30";
-        SqlConnection con = new SqlConnection(ConnectionString);
+        private const string stringConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\JERRY RICHMAN\Documents\ebundb.mdf"";Integrated Security=True;Connect Timeout=30";
+        SqlConnection con = new SqlConnection(stringConnection);
         SqlCommand cm = new SqlCommand();
         SqlDataReader dr;
 
@@ -29,7 +30,7 @@ namespace InventoryManagementSystem
             double total = 0;
             int i = 0;
             dgvOrder.Rows.Clear();
-            cm = new SqlCommand("SELECT orderid, odate, O.pid, P.pname, O.cid, C.cname, qty, price, total  FROM tbOrder AS O JOIN tbCustomer AS C ON O.cid=C.cid JOIN tbProduct AS P ON O.pid=P.pid WHERE CONCAT (orderid, odate, O.pid, P.pname, O.cid, C.cname, qty, price) LIKE '%"+txtSearch.Text+"%'", con);
+            cm = new SqlCommand("SELECT orderid, odate, pid, qty, price, total FROM tbOrder WHERE CONCAT (orderid, odate, pid, qty, price) LIKE '%"+txtSearch.Text+"%'", con);
             con.Open();
             dr = cm.ExecuteReader();
             while (dr.Read())

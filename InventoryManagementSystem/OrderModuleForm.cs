@@ -21,8 +21,7 @@ namespace InventoryManagementSystem
         public OrderModuleForm()
         {
             InitializeComponent();
-            LoadCustomer();
-            LoadProduct();
+                     LoadProduct();
         }
 
         private void pictureBoxClose_Click(object sender, EventArgs e)
@@ -31,21 +30,7 @@ namespace InventoryManagementSystem
            
         }
 
-        public void LoadCustomer()
-        {
-            int j = 0;
-            dgvCustomer.Rows.Clear();
-            cm = new SqlCommand("SELECT cid, cname FROM tbCustomer WHERE CONCAT(cid,cname) LIKE '%"+txtSearchCust.Text+"%'", con);
-            con.Open();
-            dr = cm.ExecuteReader();
-            while (dr.Read())
-            {
-                j++;
-                dgvCustomer.Rows.Add(j, dr[0].ToString(), dr[1].ToString());
-            }
-            dr.Close();
-            con.Close();
-        }
+       
 
         public void LoadProduct()
         {
@@ -63,10 +48,7 @@ namespace InventoryManagementSystem
             con.Close();
         }
 
-        private void txtSearchCust_TextChanged(object sender, EventArgs e)
-        {
-            LoadCustomer();
-        }
+       
 
         private void txtSearchProd_TextChanged(object sender, EventArgs e)
         {
@@ -90,11 +72,7 @@ namespace InventoryManagementSystem
             }
         }
 
-        private void dgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtCId.Text = dgvCustomer.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtCName.Text = dgvCustomer.Rows[e.RowIndex].Cells[2].Value.ToString();
-        }
+       
 
         private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -109,11 +87,6 @@ namespace InventoryManagementSystem
         {
             try
             {
-                if (txtCId.Text == "")
-                {
-                    MessageBox.Show("Please select customer!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
                 if (txtPid.Text == "")
                 {
                     MessageBox.Show("Please select product!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -125,7 +98,6 @@ namespace InventoryManagementSystem
                     cm = new SqlCommand("INSERT INTO tbOrder(odate, pid, cid, qty, price, total)VALUES(@odate, @pid, @cid, @qty, @price, @total)", con);
                     cm.Parameters.AddWithValue("@odate", dtOrder.Value);
                     cm.Parameters.AddWithValue("@pid", Convert.ToInt32(txtPid.Text));
-                    cm.Parameters.AddWithValue("@cid", Convert.ToInt32(txtCId.Text));
                     cm.Parameters.AddWithValue("@qty", Convert.ToInt32(UDQty.Value));
                     cm.Parameters.AddWithValue("@price", Convert.ToInt32(txtPrice.Text));
                     cm.Parameters.AddWithValue("@total", Convert.ToInt32(txtTotal.Text));
@@ -155,9 +127,7 @@ namespace InventoryManagementSystem
 
         public void Clear()
         {
-            txtCId.Clear();
-            txtCName.Clear();
-
+          
             txtPid.Clear();
             txtPName.Clear();
 
@@ -193,6 +163,31 @@ namespace InventoryManagementSystem
         private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
