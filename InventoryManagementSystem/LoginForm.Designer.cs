@@ -48,6 +48,7 @@ namespace InventoryManagementSystem
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("Segoe Script", 9.75F);
             this.txtName.Location = new System.Drawing.Point(109, 125);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Multiline = true;
@@ -79,10 +80,12 @@ namespace InventoryManagementSystem
             // 
             // txtPass
             // 
+            this.txtPass.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(109, 170);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(179, 26);
             this.txtPass.TabIndex = 3;
             this.txtPass.UseSystemPasswordChar = true;
