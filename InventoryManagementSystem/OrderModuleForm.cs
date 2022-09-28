@@ -21,7 +21,7 @@ namespace InventoryManagementSystem
         public OrderModuleForm()
         {
             InitializeComponent();
-                     LoadProduct();
+            LoadProduct();
         }
 
         private void pictureBoxClose_Click(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace InventoryManagementSystem
                 if (MessageBox.Show("Are you sure you want to insert this order?", "Saving Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
-                    cm = new SqlCommand("INSERT INTO tbOrder(odate, pid, cid, qty, price, total)VALUES(@odate, @pid, @cid, @qty, @price, @total)", con);
+                    cm = new SqlCommand("INSERT INTO tbOrder(odate, pid, qty, price, total)VALUES(@odate, @pid, @qty, @price, @total)", con);
                     cm.Parameters.AddWithValue("@odate", dtOrder.Value);
                     cm.Parameters.AddWithValue("@pid", Convert.ToInt32(txtPid.Text));
                     cm.Parameters.AddWithValue("@qty", Convert.ToInt32(UDQty.Value));
