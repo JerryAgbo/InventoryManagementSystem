@@ -107,7 +107,7 @@ namespace InventoryManagementSystem
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Black;
+            this.btnUpdate.BackColor = System.Drawing.Color.Olive;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
