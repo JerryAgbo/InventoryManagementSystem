@@ -13,7 +13,8 @@ namespace InventoryManagementSystem
 {
     public partial class LoginForm : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\acer\Documents\dbIMS.mdf;Integrated Security=True;Connect Timeout=30");
+        private const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ebundb.mdf;Integrated Security=True;Connect Timeout=30";
+        SqlConnection con = new SqlConnection(ConnectionString);
         SqlCommand cm = new SqlCommand();
         SqlDataReader dr;
         public LoginForm()
@@ -102,12 +103,38 @@ namespace InventoryManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            this.Hide();
-            mainForm.Show();
+            try
+            {
+                cm = new SqlCommand("Select * From tbUser Where Username = @username AND password= @password", con);
+                cm.Parameters.AddWithValue("@username", txtName.Text);
+                cm.Parameters.AddWithValue("@password", txtPass.Text);
+                con.Open();
+                dr = cm.ExecuteReader();
+                dr.Read();
+                if(dr.HasRows)
+                {
+                    MessageBox.Show("Welcome" + dr["fullname"].ToString() + " | ", "ACCESS GRANTED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MainForm main = new MainForm();
+                    main.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password!", "ACCESS DENIED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                con.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
         {
 
         }

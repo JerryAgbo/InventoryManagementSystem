@@ -22,7 +22,26 @@ namespace InventoryManagementSystem
         int startPoint = V;
         private void timer1_Tick(object sender, EventArgs e)
         {
-          
+            startPoint += 2;
+            progressBar1.Value = startPoint;
+            if (progressBar1.Value == 100)
+            {
+                progressBar1.Value = 0;
+                timer1.Stop();
+                LoginForm login = new LoginForm();
+                this.Hide();
+                login.ShowDialog();
+            }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
