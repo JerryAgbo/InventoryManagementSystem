@@ -106,5 +106,10 @@ namespace InventoryManagementSystem
             this.Hide();
             mainForm.Show();
         }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

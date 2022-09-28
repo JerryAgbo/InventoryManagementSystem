@@ -88,7 +88,7 @@ namespace InventoryManagementSystem
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(179, 26);
             this.txtPass.TabIndex = 3;
-            this.txtPass.UseSystemPasswordChar = true;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // pictureBox1
             // 
@@ -107,13 +107,13 @@ namespace InventoryManagementSystem
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.txtName);
-            this.panel2.Controls.Add(this.txtPass);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.txtPass);
             this.panel2.Location = new System.Drawing.Point(65, 89);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(337, 279);
@@ -140,7 +140,7 @@ namespace InventoryManagementSystem
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(259, 169);
+            this.button3.Location = new System.Drawing.Point(259, 170);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(29, 26);
             this.button3.TabIndex = 20;
